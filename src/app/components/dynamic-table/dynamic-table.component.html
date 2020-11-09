@@ -1,0 +1,22 @@
+<section class="table">
+    <div class="rnd-corner">
+        <div class="container">
+            <table class="custab text-center table-responsive">
+                <thead>
+                    <tr>
+                    <th *ngFor='let data of columnHeaders'>
+                        {{data}}                       
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let data of tableData' [style.background-color]="getColorByCountry(data)" (click)="open(data)">
+                        <td *ngFor='let header of columnHeaders' >
+                            {{data[header]}}
+                        </td>            
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
